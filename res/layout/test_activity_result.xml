@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/textview_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            android:visibility="gone" >
+        </TextView>
+
+        <WebView
+            android:id="@+id/webview_url"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+        </WebView>
+
+        <include
+            android:id="@+id/vcard_layout"
+            layout="@layout/test_activity_result_vcard"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

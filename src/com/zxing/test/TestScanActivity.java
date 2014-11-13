@@ -31,6 +31,7 @@ public class TestScanActivity extends Activity {
 		});
 	}
 
+	public static final String RESULT_KEY = "result";
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
@@ -38,6 +39,10 @@ public class TestScanActivity extends Activity {
 			if (resultCode == RESULT_OK && data != null) {
 				String result = data.getStringExtra(CaptureActivity.RESULT_KEY);
 				Log.i("Test", "扫描结果：" + result);
+				Intent intent = new Intent();
+				intent.setClass(TestScanActivity.this, TestResultActivity.class);
+				intent.putExtra(RESULT_KEY, result);
+				startActivity(intent);
 			} else {
 				Log.e("Test", "no result");
 			}

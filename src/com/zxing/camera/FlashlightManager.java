@@ -16,11 +16,11 @@
 
 package com.zxing.camera;
 
-import android.os.IBinder;
-import android.util.Log;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+
+import android.os.IBinder;
+import android.util.Log;
 
 /**
  * This class is used to activate the weak light on some camera phones (not flash)
@@ -53,9 +53,6 @@ final class FlashlightManager {
   private FlashlightManager() {
   }
 
-  /**
-   * 控制相机闪光灯开关
-   */
   //FIXME
   static void enableFlashlight() {
     setFlashlight(false);

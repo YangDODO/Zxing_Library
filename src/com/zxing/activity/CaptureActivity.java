@@ -30,9 +30,6 @@ import com.zxing.view.ViewfinderView;
 /**
  * 
  * @description 二维码扫描界面
- * @date 2014年5月23日
- * @author Yang
- * @email jixiaoyang@vrvmail.com
  * @version 1.0.0
  * 
  */
@@ -71,7 +68,7 @@ public class CaptureActivity extends Activity implements OnClickListener,
 	}
 
 	private void loadViewLayout() {
-        setContentView(R.layout.activity_capture);
+		setContentView(R.layout.activity_capture);
         init();
     }
 
